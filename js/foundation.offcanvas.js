@@ -162,13 +162,15 @@ class OffCanvas {
       window.scrollTo(0,document.body.scrollHeight);
     }
 
+    $('body').addClass('is-off-canvas-open');
+    _this.$element.addClass('is-open');
+
     /**
      * Fires when the off-canvas menu opens.
      * @event OffCanvas#opened
      */
     Foundation.Move(this.options.transitionTime, this.$element, function() {
-      $('body').addClass('is-off-canvas-open');
-      _this.$element.addClass('is-open')
+      
     });
 
     this.$triggers.attr('aria-expanded', 'true');
